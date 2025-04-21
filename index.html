@@ -452,14 +452,41 @@
             max-width: 600px;
         }
 
+
         .hero-title {
             font-size: 3.5rem;
             margin-bottom: 15px;
             line-height: 1.2;
             animation: typeWriter 2s steps(20) forwards;
-            white-space: nowrap;
             overflow: hidden;
             position: relative;
+            padding-right: 4px;
+        }
+
+        .hero-title {
+            overflow: hidden; /* Add this */
+            white-space: nowrap;
+        }
+
+        .hero-title {
+            display: inline-block; /* Add this */
+        }
+
+        .name-highlight {
+            display: inline-block; /* This helps with the animation */
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Optional: If using a typewriter animation */
+        @keyframes typeWriter {
+            from { width: 0 }
+            to { width: 150% }
+        }
+
+        .hero-title span {
+            animation: typewriter 3s steps(20) 1s 1 normal both;
         }
 
         .hero-title::after {
@@ -527,6 +554,7 @@
             box-shadow: 0 20px 40px rgba(108, 99, 255, 0.3);
             transition: var(--transition);
             animation: float 4s ease-in-out infinite;
+            margin-right: 30px;
         }
 
         .image-wrapper:hover {
@@ -1278,7 +1306,7 @@
 
             .hero-content {
                 text-align: center;
-                max-width: 100%;
+                max-width: 55%;
             }
 
             .hero-title {
@@ -1441,7 +1469,7 @@
 
             .theme-toggle {
                 bottom: 15px;
-                left: 15px;
+                right: 15px;
                 width: 40px;
                 height: 40px;
             }
@@ -1605,7 +1633,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span>Abhishek Jain</span></h1>
+                <h1 class="hero-title">Hi, I'm <span class="name-highlight">Abhishek Jain</span></h1>
                 <h2 class="hero-subtitle">Computer Science Engineer & Developer</h2>
                 <p class="hero-text">Passionate about creating innovative solutions through code and technology.</p>
                 <div class="hero-buttons">
@@ -1891,10 +1919,10 @@
                     <h3>Skills</h3>
                     <ul>
                         <li><a href="#">Python Development</a></li>
-                        <li><a href="#">Java Programming</a></li>
-                        <li><a href="#">Data Science</a></li>
-                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">C++ Programming</a></li>
                         <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Artificial Intelligence and Machine Learning</a></li>
                     </ul>
                 </div>
             </div>
